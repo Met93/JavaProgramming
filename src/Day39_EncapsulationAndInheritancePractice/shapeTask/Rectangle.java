@@ -1,6 +1,8 @@
 package src.Day39_EncapsulationAndInheritancePractice.shapeTask;
 
-public class Rectangle {
+public class Rectangle extends Shape{
+
+
     private double length;
     private double width;
 
@@ -27,8 +29,36 @@ public class Rectangle {
         }
         this.width = width;
     }
+    public Rectangle( double length, double width) {
+        super("Rectangle");
+        setLength(length);
+        setWidth(width);
+    }
 
+    @Override
+    public String getName() {
+        return super.getName();
+    }
 
+    @Override
+    public double area() {
+        return length*width;
+    }
+
+    @Override
+    public double perimeter() {
+        return (length+width)*2;
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "length=" + length +
+                ", width=" + width +
+                ", area=" + area() +
+                ", perimeter=" + perimeter() +
+                '}';
+    }
     /*
     Rectangle extends Shape:
 	variables:
