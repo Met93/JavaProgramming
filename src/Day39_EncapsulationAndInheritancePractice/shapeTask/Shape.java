@@ -44,4 +44,17 @@ public class Shape {
     public double perimeter(){
         return 0;
     }
+    /*
+    public String roString(){
+     */
+
+    @Override
+    public String toString() {
+        return "Shape{" +
+                "name='" + name + '\'' +
+                "area='" + area() + '\'' +
+                "perimeter='" + perimeter() + '\'' +
+                '}';
+    }
+
 }
